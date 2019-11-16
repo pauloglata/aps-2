@@ -1,173 +1,161 @@
-package Visão;
+package view;
 
-public class TelaProdutos extends javax.swing.JFrame {
+import javax.swing.*;
+
+public class TelaProdutos extends JFrame {
+
+    // Variables declaration - do not modify
+    private JButton jButton1;
+    private JButton jButton2;
+    private JButton jButton3;
+    private JButton jButton4;
+    private JButton jButton5;
+    private JSeparator upper;
+    private JSeparator upperMinor;
+    private JSeparator leftSide;
+    private JSeparator rightSide;
+    private JTextField text;
+    private JSeparator bottom;
+    private JLabel jLabelNomePrincipal;
+    private javax.swing.JTable jTableProdutos;
+    private javax.swing.JScrollPane pane;
+    private javax.swing.JLabel jLabelTelaPrincipal;
+
+// End of variables declaration
 
     public TelaProdutos() {
         initComponents();
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jFrame1 = new javax.swing.JFrame();
-        jLabelNomePrincipal = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTableProdutos = new javax.swing.JTable();
-        jButton5 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabelTelaPrincipal = new javax.swing.JLabel();
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
-        jFrame1.getContentPane().setLayout(jFrame1Layout);
-        jFrame1Layout.setHorizontalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        jFrame1Layout.setVerticalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        // Home layout null for background image
         getContentPane().setLayout(null);
+        // End
 
+        // Home
+        jButton1 = new JButton();
+        jButton1.setText("+");
+        getContentPane().add(jButton1);
+        jButton1.setBounds(30, 360, 70, 40);
+        // End
+
+        // Home
+        jButton2 = new JButton();
+        jButton2.setText("-");
+        getContentPane().add(jButton2);
+        jButton2.setBounds(110, 360, 70, 40);
+        // End
+
+        // Home
+        jButton3 = new JButton();
+        jButton3.setText("ADICIONAR");
+        getContentPane().add(jButton3);
+        jButton3.setBounds(220, 360, 100, 40);
+        // End
+
+        // Home
+        jButton4 = new JButton();
+        jButton4.setText("EDITAR");
+        getContentPane().add(jButton4);
+        jButton4.setBounds(330, 360, 100, 40);
+        // End
+
+        // Home
+        jButton5 = new JButton();
+        jButton5.setText("EXCLUIR");
+        getContentPane().add(jButton5);
+        jButton5.setBounds(440, 360, 100, 40);
+        // End
+        
+        // Start text
+        text = new JTextField();
+        getContentPane().add(text);
+        text.setBounds(610, 370, 180, 30);
+        // End text
+
+        // Home
+        jLabelNomePrincipal = new javax.swing.JLabel();
         jLabelNomePrincipal.setText("PRODUTOS");
         getContentPane().add(jLabelNomePrincipal);
-        jLabelNomePrincipal.setBounds(20, 20, 60, 14);
+        jLabelNomePrincipal.setBounds(30, 25, 100, 14);
+        // End
+        
+     // Start upper
+        upper = new JSeparator();
+        getContentPane().add(upper);
+        upper.setBounds(100, 30, 730, 10);
+        // End upper
+        
+        // Start upperMinor
+        upperMinor = new JSeparator();
+        getContentPane().add(upperMinor);
+        upperMinor.setBounds(10, 30, 10, 10);
+        // End upperMinor
+        
+        // Start leftSide
+        leftSide = new JSeparator();
+        leftSide.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        getContentPane().add(leftSide);
+        leftSide.setBounds(10, 30, 10, 310);
+        // End leftSide
+        
+        // Start rightSide
+        rightSide = new JSeparator();
+        rightSide.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        getContentPane().add(rightSide);
+        rightSide.setBounds(830, 30, 10, 310);
+        // End rightSide
+        
+        // Start bottom
+        bottom = new JSeparator();
+        getContentPane().add(bottom);
+        bottom.setBounds(10, 340, 820, 10);
+        // End bottom
+
+        // Home
+        jTableProdutos = new javax.swing.JTable();
 
         jTableProdutos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
-            },
-            new String [] {
-                "ID", "Nome", "Sertor", "Descrição", "Quantidade", "Valor"
-            }
-        ));
+            {null, null, null, null, null, null},
+            {null, null, null, null, null, null},
+            {null, null, null, null, null, null},
+            {null, null, null, null, null, null},
+            {null, null, null, null, null, null},
+            {null, null, null, null, null, null},
+            {null, null, null, null, null, null},
+            {null, null, null, null, null, null},
+            {null, null, null, null, null, null},
+            {null, null, null, null, null, null},
+            {null, null, null, null, null, null},
+            {null, null, null, null, null, null},
+            {null, null, null, null, null, null},
+            {null, null, null, null, null, null},
+            {null, null, null, null, null, null},
+            {null, null, null, null, null, null},
+            {null, null, null, null, null, null},
+            {null, null, null, null, null, null},
+            {null, null, null, null, null, null},
+            {null, null, null, null, null, null}
+        },
+        new String [] {
+            "ID", "Nome", "Sertor", "DescriÃ§Ã£o", "Quantidade", "Valor"
+        }
+    ));
         jTableProdutos.setColumnSelectionAllowed(true);
-        jScrollPane2.setViewportView(jTableProdutos);
-        jTableProdutos.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        
+        // Start pane
+        pane = new JScrollPane();
+        pane.setViewportView(jTableProdutos);
+        getContentPane().add(pane);
+        pane.setBounds(20, 60, 800, 250);
+        // End pane
 
-        getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(80, 120, 710, 200);
-
-        jButton5.setText("jButton5");
-        getContentPane().add(jButton5);
-        jButton5.setBounds(590, 370, 73, 23);
-
-        jButton4.setText("jButton4");
-        getContentPane().add(jButton4);
-        jButton4.setBounds(450, 370, 73, 23);
-
-        jButton1.setText("jButton1");
-        getContentPane().add(jButton1);
-        jButton1.setBounds(110, 370, 73, 23);
-
-        jButton6.setText("jButton6");
-        getContentPane().add(jButton6);
-        jButton6.setBounds(710, 370, 73, 23);
-
-        jButton3.setText("jButton3");
-        getContentPane().add(jButton3);
-        jButton3.setBounds(330, 370, 73, 23);
-
-        jButton2.setText("jButton2");
-        getContentPane().add(jButton2);
-        jButton2.setBounds(210, 380, 73, 23);
-
+        jLabelTelaPrincipal = new JLabel();
         jLabelTelaPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela-princiapal.PNG"))); // NOI18N
         getContentPane().add(jLabelTelaPrincipal);
-        jLabelTelaPrincipal.setBounds(0, 0, 890, 460);
-
-        pack();
-    }// </editor-fold>                        
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaProdutos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaProdutos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaProdutos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaProdutos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TelaProdutos().setVisible(true);
-            }
-        });
+        jLabelTelaPrincipal.setBounds(0, -30, 900, 470);
     }
-
-    // Variables declaration - do not modify                     
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JFrame jFrame1;
-    private javax.swing.JLabel jLabelNomePrincipal;
-    private javax.swing.JLabel jLabelTelaPrincipal;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTableProdutos;
-    // End of variables declaration                   
 }
