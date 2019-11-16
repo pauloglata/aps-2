@@ -1,36 +1,105 @@
-package Visão;
+package view;
 
-public class TelaGerente extends javax.swing.JFrame {
+import javax.swing.*;
+
+public class TelaGerente extends JFrame {
 
     public TelaGerente() {
         initComponents();
     }
+    
+ // Variables declaration 
+    private JButton add;
+    private JButton delete;
+    private JButton edit;
+    private JLabel text;
+    private JLabel logoLogin;
+    private JSeparator upper;
+    private JSeparator upperMinor;
+    private JSeparator leftSide;
+    private JSeparator rightSide;
+    private JSeparator bottom;
+    private JTextField textField;
+    private JScrollPane pane;
+    private JTable tableGerente;
+    // End variables  
 
     @SuppressWarnings("unchecked")
     private void initComponents() {
-
-        jLabelNomePrincipal = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTableTabelaGerentes = new javax.swing.JTable();
-        jButtonAdicionar = new javax.swing.JButton();
-        jButtonExcluir = new javax.swing.JButton();
-        jButtonEditar = new javax.swing.JButton();
-        jTextFieldTexto = new javax.swing.JTextField();
-        jSeparatorMiniSuperior = new javax.swing.JSeparator();
-        jSeparatorSuperior = new javax.swing.JSeparator();
-        jSeparatorLateralEsquerda = new javax.swing.JSeparator();
-        jSeparatorInferior = new javax.swing.JSeparator();
-        jSeparatorLateralDireita = new javax.swing.JSeparator();
-        jLabelTelaPrincipal = new javax.swing.JLabel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+    	
+    	// Layout null for background image
         getContentPane().setLayout(null);
+    	// End layout 
+    	
+    	// Start add
+    	add = new JButton();
+        add.setText("ADICIONAR");
+        getContentPane().add(add);
+        add.setBounds(130, 363, 110, 40);
+    	// End add
+        
+        // Start delete
+        delete = new JButton();
+        delete.setText("EXCLUIR");
+        getContentPane().add(delete);
+        delete.setBounds(280, 363, 110, 40);
+        //End delete
+        
+        // Start edit
+        edit = new JButton();
+        edit.setText("EDITAR");
+        getContentPane().add(edit);
+        edit.setBounds(430, 363, 110, 40);
+        // End edit
+        
+        // Start text
+        text = new JLabel();
+        text.setText("GERENTES");
+        getContentPane().add(text);
+        text.setBounds(40, 20, 60, 20);
+        // End text 
+        
+        // Start upper
+        upper = new JSeparator();
+        getContentPane().add(upper);
+        upper.setBounds(105, 30, 725, 10);
+        // End upper
+        
+        // Start upperMinor
+        upperMinor = new JSeparator();
+        getContentPane().add(upperMinor);
+        upperMinor.setBounds(10, 30, 20, 10);
+        // End upperMinor
+        
+        // Start leftSide
+        leftSide = new JSeparator();
+        leftSide.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        getContentPane().add(leftSide);
+        leftSide.setBounds(10, 30, 10, 310);
+        // End leftSide
+        
+        // Start rightSide
+        rightSide = new JSeparator();
+        rightSide.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        getContentPane().add(rightSide);
+        rightSide.setBounds(830, 30, 10, 310);
+        // End rightSide
+        
+        // Start bottom
+        bottom = new JSeparator();
+        getContentPane().add(bottom);
+        bottom.setBounds(10, 340, 820, 10);
+        // End bottom
+        
+        // Start textField
+        textField = new JTextField();
+        getContentPane().add(textField);
+        textField.setBounds(610, 370, 200, 30);
+        // End textField
 
-        jLabelNomePrincipal.setText("GERENTES");
-        getContentPane().add(jLabelNomePrincipal);
-        jLabelNomePrincipal.setBounds(40, 20, 60, 20);
+        tableGerente = new JTable();
 
-        jTableTabelaGerentes.setModel(new javax.swing.table.DefaultTableModel(
+        tableGerente.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -60,91 +129,19 @@ public class TelaGerente extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTableTabelaGerentes);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 60, 800, 250);
-
-        jButtonAdicionar.setText("ADICIONAR");
-        getContentPane().add(jButtonAdicionar);
-        jButtonAdicionar.setBounds(130, 363, 110, 40);
-
-        jButtonExcluir.setText("EXCLUIR");
-        getContentPane().add(jButtonExcluir);
-        jButtonExcluir.setBounds(280, 363, 110, 40);
-
-        jButtonEditar.setText("EDITAR");
-        getContentPane().add(jButtonEditar);
-        jButtonEditar.setBounds(430, 360, 110, 40);
-        getContentPane().add(jTextFieldTexto);
-        jTextFieldTexto.setBounds(610, 370, 120, 30);
-        getContentPane().add(jSeparatorMiniSuperior);
-        jSeparatorMiniSuperior.setBounds(10, 30, 20, 10);
-        getContentPane().add(jSeparatorSuperior);
-        jSeparatorSuperior.setBounds(100, 30, 730, 10);
-
-        jSeparatorLateralEsquerda.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparatorLateralEsquerda);
-        jSeparatorLateralEsquerda.setBounds(10, 30, 10, 310);
-        getContentPane().add(jSeparatorInferior);
-        jSeparatorInferior.setBounds(10, 340, 820, 10);
-
-        jSeparatorLateralDireita.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparatorLateralDireita);
-        jSeparatorLateralDireita.setBounds(830, 30, 10, 310);
-
-        jLabelTelaPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela-princiapal.PNG"))); // NOI18N
-        getContentPane().add(jLabelTelaPrincipal);
-        jLabelTelaPrincipal.setBounds(0, 0, 860, 460);
-
-        pack();
-    }                        
-
-    
-    public static void main(String args[]) {
         
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("NimbusjButtonAdicionar(info.getName())" != null) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
+        // Start pane
+        pane = new JScrollPane();
+        pane.setViewportView(tableGerente);
+        getContentPane().add(pane);
+        pane.setBounds(20, 60, 800, 250);
+        // End pane
         
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TelaGerente().setVisible(true);
-            }
-        
-    });
-   }
-
-
-
-    // Variables declaration - do not modify                     
-    private javax.swing.JButton jButtonAdicionar;
-    private javax.swing.JButton jButtonEditar;
-    private javax.swing.JButton jButtonExcluir;
-    private javax.swing.JLabel jLabelNomePrincipal;
-    private javax.swing.JLabel jLabelTelaPrincipal;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparatorInferior;
-    private javax.swing.JSeparator jSeparatorLateralDireita;
-    private javax.swing.JSeparator jSeparatorLateralEsquerda;
-    private javax.swing.JSeparator jSeparatorMiniSuperior;
-    private javax.swing.JSeparator jSeparatorSuperior;
-    private javax.swing.JTable jTableTabelaGerentes;
-    private javax.swing.JTextField jTextFieldTexto;
-    // End of variables declaration                   
+        // Start LogoLogin
+        logoLogin = new JLabel();
+        logoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela-princiapal.PNG"))); // NOI18N
+        getContentPane().add(logoLogin);
+        logoLogin.setBounds(0, -30, 900, 470);
+        // End LogoLogin
+    }                                            
 }
