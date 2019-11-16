@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class TelaProdutos extends JFrame {
 
-    // Variables declaration - do not modify
+    // Variables declaration 
     private JButton jButton1;
     private JButton jButton2;
     private JButton jButton3;
