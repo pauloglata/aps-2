@@ -5,6 +5,7 @@ public class Main extends TelaLogin {
 	public static void main(String[] args) {
 		TelaLogin tl = new TelaLogin();
 		tl.setVisible(true);
+		tl.setResizable(false);
 		tl.setSize(475,328);
 		tl.setLocation(450,200);
 		tl.setDefaultCloseOperation(EXIT_ON_CLOSE);
