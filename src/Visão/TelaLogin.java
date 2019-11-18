@@ -144,5 +144,6 @@ public class TelaLogin extends JFrame {
     private void accessActionPerformed(java.awt.event.ActionEvent evt) {                                               
     	TelaPrincipal tp = new TelaPrincipal();
     	tp.setVisible(true);
+	tp.setResizable(false);
     }                                             
 }
