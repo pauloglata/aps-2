@@ -213,6 +213,7 @@ public class TelaPrincipal extends JFrame implements ActionListener{
     private void clientActionPerformed(java.awt.event.ActionEvent evt) {                                         
     	TelaClientes tc = new TelaClientes();
     	tc.setVisible(true);
+	tc.setResizable(false);
         tc.setSize(912, 476);
         tc.setLocation(227,126);
     }                                        
@@ -220,6 +221,7 @@ public class TelaPrincipal extends JFrame implements ActionListener{
     private void managerActionPerformed(java.awt.event.ActionEvent evt) {                                         
     	TelaGerente tg = new TelaGerente();
     	tg.setVisible(true);
+	tg.setResizable(false);
         tg.setSize(912, 476);
         tg.setLocation(227,126);
     }  
@@ -227,6 +229,7 @@ public class TelaPrincipal extends JFrame implements ActionListener{
     private void productActionPerformed(java.awt.event.ActionEvent evt) {                                         
     	TelaProdutos tp = new TelaProdutos();
     	tp.setVisible(true);
+	tp.setResizable(false);
         tp.setSize(912, 476);
         tp.setLocation(227,126);
     }
@@ -234,6 +237,7 @@ public class TelaPrincipal extends JFrame implements ActionListener{
     private void salesActionPerformed(java.awt.event.ActionEvent evt) {                                         
     	TelaVenda tv = new TelaVenda();
     	tv.setVisible(true);
+	tv.setResizable(false);
         tv.setSize(912, 476);
         tv.setLocation(227,126);
     }
@@ -241,6 +245,7 @@ public class TelaPrincipal extends JFrame implements ActionListener{
     private void sectorActionPerformed(java.awt.event.ActionEvent evt) {                                         
     	TelaSetor ts = new TelaSetor();
     	ts.setVisible(true);
+	ts.setResizable(false);
         ts.setSize(912, 476);
         ts.setLocation(227,126);
     }
@@ -248,6 +253,7 @@ public class TelaPrincipal extends JFrame implements ActionListener{
     private void salesmanActionPerformed(java.awt.event.ActionEvent evt) {                                         
     	TelaVendedor tvs = new TelaVendedor();
     	tvs.setVisible(true);
+	tvs.setResizable(false);
         tvs.setSize(912, 476);
         tvs.setLocation(227,126);
     }
